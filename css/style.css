@@ -1,3 +1,13 @@
+body {
+    font-family: "Lato", sans-serif;
+    margin-left: 10px;
+    transition: background-color 1s;
+  }
+  #main {
+    transition: margin-left 1s;
+    height: 100%;
+  }
+
 #leftNav a {
     text-decoration: none;
     padding-top: 15px;
