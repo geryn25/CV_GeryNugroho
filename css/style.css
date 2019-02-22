@@ -1,0 +1,38 @@
+#leftNav a {
+    text-decoration: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 30px;
+    display: block;
+    color: black;
+    text-align: center;
+}
+.menu:hover {
+    background-color: black;
+}
+#leftNav a:hover {
+    color: white;
+}
+
+#leftNav {
+    background-color: #f1f1f1;
+    height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition:width 0.5s;
+    
+    
+}
+#leftNav a img {
+    width: 50%;
+    height: 20%;
+    border-radius: 50%;
+}
+.closebtn {
+    margin-left: 80%;
+    margin-top: 0%;
+}
