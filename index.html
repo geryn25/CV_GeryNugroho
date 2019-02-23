@@ -9,17 +9,62 @@
     <div id="leftNav">
         <a href="javascript:void(0)" class="closebtn" style="font-size:50px;padding-top:0;padding-bottom:0 ">&times;</a>
         <a id="img"><img src="img/Prof_pict.jpg" alt=""></a>
-        <a href="#" class="menu">Profile</a>
-        <a href="#" class="menu">Services</a>
+        <a href="#" class="menu" id='open'  onclick="openPage('profile','this','red')">Profile</a>
+        <a href="#" class="menu" onclick="openPage('Education','this','green')">Education</a>
         <a href="#" class="menu">Clients</a>
         <a href="#" class="menu">Contact</a>
     </div>
-    <nav id="main">
+    <nav class="main" id="topbar" style="background-color: greenyellow;position: fixed;width: 100%">
         <span style="font-size:30px;cursor:pointer" id="openNav">&#9776;</span>
-        <p>tulisan</p>
+        <span style="font-size:30px;cursor:default;margin-left: 0%;width: 100%"><a style="text-decoration:none;margin-left: 40%; " id="judul">CV Gery Nugroho</a></span>
+        
+        
+    </nav>
+    <nav class="main" style="height:100%;margin-top:60px">
+        <div id="profile" class="tabcontent">
+                <h3>Home</h3>
+                <p>Home is where the heart is..</p>
+        </div>
+        <div id="Education" class="tabcontent">
+                <h3>Home</h3>
+                <p>Home is where the heart is..</p>
+        </div>
     </nav>
             
 
-    
+    <script>
+            window.onscroll = function() {myFunction()};
+            
+            var navbar = document.getElementById("topbar");
+            
+            var sticky = navbar.offsetTop;
+            
+            function myFunction() {
+              if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+              } else {
+                navbar.classList.remove("sticky");
+              }
+            }
+
+    function openPage(pageName, elmnt, color) {
+  // Hide all elements with class="tabcontent" by default */
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        // Remove the background color of all tablinks/buttons
+        tablinks = document.getElementsByClassName("menu");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+        // Show the specific tab content
+        document.getElementById(pageName).style.display = "block";
+        document.getElementById(pageName).style.backgroundColor = color;
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("open").click(); 
+            </script>
 </body>
 </html>
