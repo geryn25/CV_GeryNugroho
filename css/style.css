@@ -25,15 +25,19 @@ body {
     color: black;
     text-align: center;
 }
+.menu {
+  color:black;
+}
 .menu:hover {
     background-color: black;
+    color: white;
 }
 #leftNav a:hover {
     color: white;
 }
 
 #leftNav {
-    background-color: #f1f1f1;
+    background-color: #555;
     height: 100%;
   width: 0;
   position: fixed;

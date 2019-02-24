@@ -9,9 +9,9 @@
     <div id="leftNav">
         <a href="javascript:void(0)" class="closebtn" style="font-size:50px;padding-top:0;padding-bottom:0 ">&times;</a>
         <a id="img"><img src="img/Prof_pict.jpg" alt=""></a>
-        <a href="#" class="menu" id='open'  onclick="openPage('profile','this','red')">Profile</a>
-        <a href="#" class="menu" onclick="openPage('Education','this','green')">Education</a>
-        <a href="#" class="menu">Clients</a>
+        <a href="#" class="menu" id='open'  onclick="openPage('profile','open','red')">Profile</a>
+        <a href="#" class="menu" id="edu" onclick="openPage('Education','edu','green')">Education</a>
+        <a href="#" class="menu" id="">Clients</a>
         <a href="#" class="menu">Contact</a>
     </div>
     <nav class="main" id="topbar" style="background-color: greenyellow;position: fixed;width: 100%">
@@ -58,10 +58,17 @@
         tablinks = document.getElementsByClassName("menu");
         for (i = 0; i < tablinks.length; i++) {
             tablinks[i].style.backgroundColor = "";
+            tablinks[i].style.color="white";
         }
+
+        
         // Show the specific tab content
         document.getElementById(pageName).style.display = "block";
         document.getElementById(pageName).style.backgroundColor = color;
+
+        document.getElementById(elmnt).style.backgroundColor = "green";
+        document.getElementById(elmnt).style.color = "white";
+        
 }
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("open").click(); 
