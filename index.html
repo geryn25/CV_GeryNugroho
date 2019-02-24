@@ -9,27 +9,90 @@
     <div id="leftNav">
         <a href="javascript:void(0)" class="closebtn" style="font-size:50px;padding-top:0;padding-bottom:0 ">&times;</a>
         <a id="img"><img src="img/Prof_pict.jpg" alt=""></a>
-        <a href="#" class="menu" id='open'  onclick="openPage('profile','open','red')">Profile</a>
-        <a href="#" class="menu" id="edu" onclick="openPage('Education','edu','green')">Education</a>
-        <a href="#" class="menu" id="">Clients</a>
-        <a href="#" class="menu">Contact</a>
+        <a href="#" class="menu" id='open'  onclick="openPage('profile','open')">Profile</a>
+        <a href="#" class="menu" id="edu" onclick="openPage('Education','edu')">Education</a>
+        <a href="#" class="menu" id="sk" onclick="openPage('Skill','sk')">Skill</a>
+        <a href="#" class="menu" id="cntct" onclick="openPage('Contact','cntct')"">Contact</a>
     </div>
-    <nav class="main" id="topbar" style="background-color: greenyellow;position: fixed;width: 100%">
-        <span style="font-size:30px;cursor:pointer" id="openNav">&#9776;</span>
-        <span style="font-size:30px;cursor:default;margin-left: 0%;width: 100%"><a style="text-decoration:none;margin-left: 40%; " id="judul">CV Gery Nugroho</a></span>
+    <nav class="main" id="topbar" style="background-color: green;position: fixed;width: 100%">
+        <span style="font-size:30px;cursor:pointer;color:white" id="openNav">&#9776;</span>
+        <span style="font-size:30px;cursor:default;margin-left: 0%;width: 100%"><a style="text-decoration:none;margin-left: 40%;color:white " id="judul">CV Gery Nugroho</a></span>
         
         
     </nav>
     <nav class="main" style="height:100%;margin-top:60px">
         <div id="profile" class="tabcontent">
-                <h3>Home</h3>
-                <p>Home is where the heart is..</p>
+                <h2 style="margin-left:45%">PROFILE</h2>
+                <img src="img/Profile.JPG" style="padding-top:25px;width:200PX;HEIGHT;150PX;margin-left:42%;border-radius:100px">
+                <p>Halooo, perkenalkan nama saya Gery Nugroho. saya lahir pada tanggal 25 Maret 1999. sekarang ini, saya berkuliah di salah satu universitas swasta terbaik di indonesia yaitu Telkom University. saya mengambil jurusan S1 Informatika di kampus ini.</p>
+                <p>Banyak sekali hal yang saya pelajari selama berkuliah di Telkom University. saya mempelajari banyak bahasa pemrograman seperti C++, java, Pascal, Python,HTML, dan javascript</p>
         </div>
         <div id="Education" class="tabcontent">
-                <h3>Home</h3>
-                <p>Home is where the heart is..</p>
+                <h2 style="margin-left:45%">Riwayat Pendidikan</h2>
+                <table>
+                  <tr>
+                    <th>Tahun</th>
+                    <th>Pendidikan</th>
+                  </tr>
+                  <tr>
+                    <td>2005-2011</td>
+                    <td>SDN 1 Selong</td>
+                  </tr>
+                  <tr>
+                    <td>2011-2014</td>
+                    <td>SMPN 1 Selong</td>
+                  </tr>
+                  <tr>
+                    <td>2014-2017</td>
+                    <td>SMAN 1 Selong</td>
+                  </tr>
+                  <tr>
+                    <td>2017-Sekarang</td>
+                    <td>Telkom University</td>
+                  </tr>
+                </table>
+                
+        </div>
+        <div id="Skill" class="tabcontent">
+          <h2 style="margin-left:45%">Skill</h2>
+          <p>menggunakan presentasi dari 0 sampai 100%</p>
+          <br>
+          <h4>C++</h4>
+          <div class="bar">
+            <div class="isibar" style="width:50%">50%</div>
+          </div>
+          <br>
+          <h4>Java</h4>
+          <div class="bar">
+            <div class="isibar" style="width:60%">60%</div>
+          </div>
+          <br>
+          <h4>HTML</h4>
+          <div class="bar">
+            <div class="isibar" style="width:43%">43%</div>
+          </div>
+          <br>
+          <h4>Javascript</h4>
+          <div class="bar">
+            <div class="isibar" style="width:44%">44%</div>
+          </div>
+        </div>
+        <div id="Contact" class="tabcontent">
+          <h2 style="margin-left:45%">Contact</h2>
+            <h3>Address and Phone Number</h3>
+            <h4>Gery Nugroho</h4>
+            <h4>BTN Griya Lendang Bedurik B22, Selong Lombok Timur, NTB</h4>
+            <br>
+            <br>
+            <h3>Social Media</h3>
+            <h4>Instagram : @gerinugroho</h4>
+            <h4>Whatsapp  : +6282339802684</h4>
+            <h4>Facebook  : geryn25</h4>
         </div>
     </nav>
+    <div class="footer">
+      <p>1301170116</p>
+    </div>
             
 
     <script>
@@ -47,7 +110,7 @@
               }
             }
 
-    function openPage(pageName, elmnt, color) {
+    function openPage(pageName, elmnt) {
   // Hide all elements with class="tabcontent" by default */
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
@@ -64,7 +127,6 @@
         
         // Show the specific tab content
         document.getElementById(pageName).style.display = "block";
-        document.getElementById(pageName).style.backgroundColor = color;
 
         document.getElementById(elmnt).style.backgroundColor = "green";
         document.getElementById(elmnt).style.color = "white";

@@ -27,6 +27,7 @@ body {
 }
 .menu {
   color:black;
+  
 }
 .menu:hover {
     background-color: black;
@@ -84,4 +85,45 @@ body {
     display: none;
     text-align: left;
   }
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: green;
+  color: white;
+  text-align: center;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child {
+  background-color: #dddddd;
+}
+
+.bar {
+  background-color: green;
+  border-radius: 50px;
+  height: 35px;
+}
+
+.isibar {
+  background-color:skyblue;
+  height: 25px;
+  border-radius: 50px;
+  text-align: center;
+  padding-top:10px;
+  color: white;
 }
